@@ -20,6 +20,7 @@ export async function mineAtom(instance: Contract, targetAtom: TargetAtom, gasPr
     if (dryRun) {
         return false;
     } else {
+         console.log('found',targetAtom.nonce);
         return instance.mintTo(targetAtom.nonce, {value, gasPrice, gasLimit});
     }
     
