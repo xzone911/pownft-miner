@@ -1,6 +1,6 @@
 import { Contract, Signer } from "ethers";
 
-const MAINNET_ADDRESS = "0x9Abb7BdDc43FA67c76a62d8C016513827f59bE1b";
+const MAINNET_ADDRESS = "0x1e4e1208ab4ba7740fe73d3728df1f89be6c649b";
 
 export const abi = [
   {
@@ -207,8 +207,9 @@ export const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "nonce", type: "uint256" }],
-    name: "mine",
+    inputs: [{"internalType":"address","name":"to","type":"address"},
+    {"internalType":"uint256","name":"nonce","type":"uint256"}],
+    name: "mintTo",
     outputs: [],
     stateMutability: "payable",
     type: "function",
